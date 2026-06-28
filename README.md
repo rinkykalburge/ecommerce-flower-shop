@@ -1,14 +1,14 @@
-# ecommerce-flower-shop
-🌸 A responsive e-commerce flower shop website built with HTML, CSS, and JavaScript, featuring a modern UI and seamless shopping experience.
 # 🌸 E-Commerce Flower Shop
 
-A modern and responsive e-commerce flower shop website built using **HTML, CSS, and JavaScript**. The project provides a clean user interface for browsing flowers and demonstrates responsive web design principles.
+A modern and responsive **Flower Shop** website built using **HTML5, CSS3, and JavaScript**. This project provides a clean and user-friendly interface for browsing flowers and demonstrates responsive web design principles.
 
 ## 🚀 Features
 
 * Responsive design for desktop, tablet, and mobile
-* Modern and attractive user interface
-* Product catalog with flower collections
+* Attractive and modern user interface
+* Flower gallery and product catalog
+* Shopping cart page
+* Contact page
 * Easy navigation
 * Fast and lightweight
 
@@ -17,26 +17,35 @@ A modern and responsive e-commerce flower shop website built using **HTML, CSS, 
 * HTML5
 * CSS3
 * JavaScript
+* Bootstrap
 
 ## 📂 Project Structure
 
-* `index.html` – Home page
-* `style.css` – Styling
-* `script.js` – JavaScript functionality
-* `images/` – Project images and assets
-
-## 📸 Screenshots
-
-Add screenshots of your project here.
+```text
+├── index.html
+├── about.html
+├── gallery.html
+├── shop.html
+├── contact.html
+├── cart.html
+├── css/
+├── js/
+├── images/
+├── fonts/
+```
 
 ## ▶️ How to Run
 
-1. Download or clone this repository.
+1. Clone or download this repository.
 2. Open the project folder.
-3. Open `index.html` in your web browser.
+3. Open `index.html` in your browser.
+
+## 📸 Screenshots
+
+*Add screenshots of the homepage and other pages here.*
 
 ## 👨‍💻 Author
 
 **Rinku Kalburge**
 
-Final Year Engineering Student | Aspiring Software Engineer | Full Stack Developer
+Final Year Engineering Student | Aspiring Full Stack Developer
