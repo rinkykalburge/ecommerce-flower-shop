@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - Happy Buds</title>
+
+  <style>
+    body { font-family: sans-serif; background: #fff; padding: 30px; }
+    .cart-item { display: flex; gap: 20px; padding:15px; border:1px solid #ddd; margin-bottom:15px; border-radius:10px; }
+    .cart-item img { width:120px; height:120px; object-fit:cover; border-radius:10px; }
+    .cart-info { flex-grow:1; }
+    .title { font-size:20px; font-weight:bold; }
+    .price { font-size:18px; color:#d32f75; }
+    .total-box { margin-top:20px; font-size:22px; font-weight:bold; }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align:center; color:#d32f75;">Your Cart</h1>
+<div id="cartContainer"></div>
+<div class="total-box" id="grandTotal"></div>
+
+<script>
+function loadCart() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let container = document.getElementById("cartContainer");
+  let grandTotal = 0;
+
+  container.innerHTML = "";
+
+  cart.forEach((item, i) => {
+    grandTotal += parseInt(item.product_price);
+
+    container.innerHTML += `
+      <div class="cart-item">
+        <img src="${item.product_img}">
+        <div class="cart-info">
+          <div class="title">${item.product_name}</div>
+          <div class="price">₹${item.product_price}</div>
+        </div>
+      </div>
+    `;
+  });
+
+  document.getElementById("grandTotal").innerHTML = "Grand Total: ₹" + grandTotal;
+}
+
+loadCart();
+</script>
+
+</body>
+</html>

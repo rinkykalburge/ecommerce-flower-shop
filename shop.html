@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flower Shop - Happy Buds</title>
+
+  <style>
+    .product-card:hover { transform: scale(1.05); box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+    .product-card img:hover { transform: scale(1.1); }
+    .product-card button:hover { background: #b72b65; transform: translateY(-3px); }
+  </style>
+</head>
+
+<body style="margin:0; padding:0; font-family:sans-serif;">
+
+<section id="shop" style="padding: 60px 0;">
+  <h2 style="text-align:center; font-size:38px; margin-bottom:10px; color:#d32f75;">Shop Beautiful Flowers</h2>
+  <p style="text-align:center; margin-bottom:40px; font-size:18px; color:#555;">
+    Choose from our fresh & stunning flower collections
+  </p>
+
+  <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
+
+    <!-- PRODUCT 1 -->
+    <div class="product-card" style="width:250px; background:#fff; padding:15px; border-radius:14px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:.3s;">
+      <img src="images/rr.jpg" style="width:100%; height:180px; object-fit:cover; border-radius:10px;">
+      <h3>Red Roses</h3>
+      <p>₹499</p>
+      <button onclick="addToCart('Red Roses','499','images/rr.jpg')" 
+        style="background:#d32f75; color:#fff; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">
+        Buy Now
+      </button>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="product-card" style="width:250px; background:#fff; padding:15px; border-radius:14px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:.3s;">
+      <img src="images/tullips.jpg" style="width:100%; height:180px; object-fit:cover; border-radius:10px;">
+      <h3>Mixed Tulip Basket</h3>
+      <p>₹699</p>
+      <button onclick="addToCart('Mixed Tulip Basket','699','images/tullips.jpg')" 
+        style="background:#d32f75; color:#fff; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">
+        Buy Now
+      </button>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="product-card" style="width:250px; background:#fff; padding:15px; border-radius:14px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:.3s;">
+      <img src="images/lilly.jpg" style="width:100%; height:180px; object-fit:cover; border-radius:10px;">
+      <h3>White Lilies Arrangement</h3>
+      <p>₹599</p>
+      <button onclick="addToCart('White Lilies Arrangement','599','images/lilly.jpg')" 
+        style="background:#d32f75; color:#fff; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">
+        Buy Now
+      </button>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="product-card" style="width:250px; background:#fff; padding:15px; border-radius:14px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:.3s;">
+      <img src="images/orchid.jpg" style="width:100%; height:180px; object-fit:cover; border-radius:10px;">
+      <h3>Purple Orchid Bouquet</h3>
+      <p>₹899</p>
+      <button onclick="addToCart('Purple Orchid Bouquet','899','images/orchid.jpg')" 
+        style="background:#d32f75; color:#fff; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">
+        Buy Now
+      </button>
+    </div>
+
+    <!-- PRODUCT 5 -->
+    <div class="product-card" style="width:250px; background:#fff; padding:15px; border-radius:14px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:.3s;">
+      <img src="images/ffff.jpg" style="width:100%; height:180px; object-fit:cover; border-radius:10px;">
+      <h3>Sunflower Bundle</h3>
+      <p>₹449</p>
+      <button onclick="addToCart('Sunflower Bundle','449','images/ffff.jpg')" 
+        style="background:#d32f75; color:#fff; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">
+        Buy Now
+      </button>
+    </div>
+
+    <!-- PRODUCT 6 -->
+    <div class="product-card" style="width:250px; background:#fff; padding:15px; border-radius:14px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:.3s;">
+      <img src="images/bluer.jpg" style="width:100%; height:180px; object-fit:cover; border-radius:10px;">
+      <h3>Rare Blue Roses</h3>
+      <p>₹1299</p>
+      <button onclick="addToCart('Rare Blue Roses','1299','images/bluer.jpg')" 
+        style="background:#d32f75; color:#fff; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">
+        Buy Now
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<script>
+function addToCart(name, price, img) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  cart.push({
+    product_name: name,
+    product_price: price,
+    product_img: img,
+    quantity: 1
+  });
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert(name + " added to cart!");
+  window.location.href = "cart.html";  
+}
+</script>
+
+</body>
+</html>
